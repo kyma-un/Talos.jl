@@ -1,15 +1,12 @@
-module SE2
-
-using StaticArrays
-
-export Se2
-
 # ============================================================
 # SE(2) homogeneous transformation
 # ============================================================
 
-function Se2(x::T, y::T, θ::T; deg::Bool=false) where T
-    θ = deg ? θ * (pi / one(T) / 180) : θ
+function Se2(x, y, θ; deg::Bool=false)
+    # type normalization
+    x, y, θ = promote(float(x), float(y), float(θ))
+
+    θ = deg ? deg2rad(θ) : θ
 
     c = cos(θ)
     s = sin(θ)
@@ -17,20 +14,18 @@ function Se2(x::T, y::T, θ::T; deg::Bool=false) where T
     return @SMatrix [
         c   -s   x
         s    c   y
-        zero(T) zero(T) one(T)
+        zero(x)  zero(x)  one(x)
     ]
 end
 
 # se2([x, y])
-Se2(xy::SVector{2,T}; deg::Bool=false) where T =
-    Se2(xy[1], xy[2], zero(T); deg=deg)
+Se2(xy::SVector{2}; deg::Bool=false) =
+    Se2(xy[1], xy[2], zero(eltype(xy)); deg=deg)
 
 # se2([x, y], θ)
-Se2(xy::SVector{2,T}, θ::T; deg::Bool=false) where T =
+Se2(xy::SVector{2}, θ; deg::Bool=false) =
     Se2(xy[1], xy[2], θ; deg=deg)
 
 # se2([x, y, θ])
-Se2(xyt::SVector{3,T}; deg::Bool=false) where T =
+Se2(xyt::SVector{3}; deg::Bool=false) =
     Se2(xyt[1], xyt[2], xyt[3]; deg=deg)
-
-end # module

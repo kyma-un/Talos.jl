@@ -1,0 +1,6 @@
+function Roty(θ::Real; deg::Bool=false)
+    θ = deg ? deg2rad(θ) : θ
+
+    R = RotY(θ)           # RotY from Rotations.jl
+    return SMatrix{3,3,Float64}(R)      # Convert to standard 3x3 Array
+end

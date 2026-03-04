@@ -1,27 +1,27 @@
-module SE3
+# ============================================================
+# SE(3) homogeneous transformation
+# Embedding of SE(2) into SE(3)
+# ============================================================
 
-using StaticArrays
+"""
+    Se3(T2::SMatrix{3,3})
 
-export SE3, embed_se2
+Embed an SE(2) homogeneous transformation into SE(3).
 
-struct SE3{T}
-    R::SMatrix{3,3,T,9}
-    t::SVector{3,T}
-end
+The SE(2) transform is assumed to lie in the XY plane.
+"""
+function Se3(T2::SMatrix{3,3})
+    # type normalization
+    T = eltype(T2)
 
-function embed_se2(x::SMatrix{3,3,T,9}) where T
-    R2 = x[1:2, 1:2]
-    t2 = x[1:2, 3]
+    R2 = T2[1:2, 1:2]
+    t2 = T2[1:2, 3]
 
-    R = @SMatrix [
-        R2[1,1] R2[1,2] zero(T)
-        R2[2,1] R2[2,2] zero(T)
-        zero(T) zero(T) one(T)
+    return @SMatrix [
+        R2[1,1]  R2[1,2]  zero(T)  t2[1]
+        R2[2,1]  R2[2,2]  zero(T)  t2[2]
+        zero(T)  zero(T)  one(T)   zero(T)
+        zero(T)  zero(T)  zero(T)  one(T)
     ]
-
-    t = @SVector [t2[1], t2[2], zero(T)]
-
-    return SE3(R, t)
 end
 
-end # module

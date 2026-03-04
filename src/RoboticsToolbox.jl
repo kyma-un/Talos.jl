@@ -1,30 +1,27 @@
+"""
+    module RoboticsToolbox
+
+Main entry point for the RoboticsToolbox package.
+
+This module provides a unified public API for common robotics utilities,
+including homogeneous transformations and visualization tools. Internal
+functionality is delegated to specialized submodules.
+"""
 module RoboticsToolbox
 
-using LinearAlgebra
-using StaticArrays
-using Rotations
-using CoordinateTransformations
+using Reexport
 
+# ------------------------------------------------------------------
+# Internal submodules
+# ------------------------------------------------------------------
 include("base/HomogenousTransforms.jl")
+@reexport using .HomogenousTransforms
+
+include("common/common.jl")
+@reexport using .Common
+
 include("plotting/BasePlots.jl")
-include("base/se2.jl")
+@reexport using .BasePlots
 
-using .HomogenousTransforms
-using .BasePlots
-using .SE2
 
-# Exportar lo propio
-export SE3, HomogenousTransform, Se2, trplot3
-
-# -------------------------------
-# Reexportar todo Rotations.jl
-# -------------------------------
-for name in names(Rotations; all = false)
-    # all=false para solo nombres exportados por Rotations
-    @eval export $(name)
-end
-
-# Reexportar Translation
-export Translation
-
-end
+end # module RoboticsToolbox
