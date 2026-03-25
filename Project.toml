@@ -5,13 +5,17 @@ authors = ["Andrés Morales", "Juan Daleman"]
 
 [deps]
 CoordinateTransformations = "150eb455-5306-5404-9cee-2592286d6298"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+PrettyTables = "08abe8d2-0d0c-5749-adfa-8a2ac140af0d"
 Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
 Rotations = "6038ab10-8711-5258-84ad-4b1120ba62dc"
 StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 
 [compat]
+DataFrames = "1.8.1"
 LinearAlgebra = "1.11.0"
+PrettyTables = "3.2.3"
 Reexport = "1.2.2"
 Rotations = "1.7.1"
 StaticArrays = "1.9.16"

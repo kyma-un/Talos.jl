@@ -17,6 +17,9 @@ using Reexport
 include("base/HomogenousTransforms.jl")
 @reexport using .HomogenousTransforms
 
+include("Documentar/Documentar.jl")
+@reexport using .Documentar
+
 include("common/common.jl")
 @reexport using .Common
 
