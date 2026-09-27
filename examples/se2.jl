@@ -1,5 +1,5 @@
 using StaticArrays
-using RoboticsToolbox: Se2
+using Talos: Se2
 
 println("=== SE(2) examples ===\n")
 

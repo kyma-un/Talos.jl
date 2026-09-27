@@ -1,7 +1,7 @@
 """
-Spatial transforms for robotics: SO(2), SO(3), SE(2) and SE(3).
+Talos: spatial transforms for robotics.
 """
-module RoboticsToolbox
+module Talos
 
 using Reexport
 

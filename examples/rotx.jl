@@ -1,6 +1,6 @@
 using LinearAlgebra
 using Rotations
-using RoboticsToolbox: Rotx
+using Talos: Rotx
 
 # ----------------------------------------
 # 1. Rotation about X-axis (radians)

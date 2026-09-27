@@ -1,4 +1,4 @@
-# RoboticsToolbox
+# Talos
 
 [![Build Status](https://github.com/kyma-un/JuliaRobTB/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/kyma-un/JuliaRobTB/actions/workflows/CI.yml?query=branch%3Amain)
 
@@ -10,7 +10,7 @@ Transformaciones homogéneas y rotaciones para robótica en Julia.
 using Pkg
 Pkg.add(url="https://github.com/kyma-un/JuliaRobTB")
 
-using RoboticsToolbox
+using Talos
 using StaticArrays
 
 T = Se2(1.0, 2.0, π/2)

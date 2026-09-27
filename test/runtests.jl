@@ -1,7 +1,7 @@
-using RoboticsToolbox
+using Talos
 using Test
 
-@testset "RoboticsToolbox" begin
+@testset "Talos" begin
     include("test_se2.jl")
     include("test_se3.jl")
     include("test_transl.jl")

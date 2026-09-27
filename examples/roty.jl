@@ -1,6 +1,6 @@
 using LinearAlgebra
 using Rotations
-using RoboticsToolbox: Roty
+using Talos: Roty
 
 # ----------------------------------------
 # 1. Rotation about Y-axis (radians)

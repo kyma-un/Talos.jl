@@ -1,7 +1,7 @@
 using LinearAlgebra
 using StaticArrays
-using RoboticsToolbox: IsRot2
-using RoboticsToolbox: Rot2, Se2
+using Talos: IsRot2
+using Talos: Rot2, Se2
 
 # ----------------------------------------
 # 1. Single 2D rotation

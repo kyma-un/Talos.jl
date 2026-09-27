@@ -1,7 +1,7 @@
 using Test
 using LinearAlgebra
 using StaticArrays
-using RoboticsToolbox: Roty
+using Talos: Roty
 
 @testset "Roty" begin
 

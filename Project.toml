@@ -1,4 +1,4 @@
-name = "RoboticsToolbox"
+name = "Talos"
 uuid = "04af9736-3fd9-43ce-b456-74816504871c"
 version = "0.0.1"
 authors = ["Andrés Morales", "Juan Daleman"]
@@ -13,7 +13,7 @@ StaticArrays = "90137ffa-7385-5640-81b9-e52037218182"
 Makie = "ee78f7c6-11fb-53f2-987a-cfe4a2b5a57a"
 
 [extensions]
-RoboticsToolboxMakieExt = "Makie"
+TalosMakieExt = "Makie"
 
 [compat]
 LinearAlgebra = "1.10"

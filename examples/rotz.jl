@@ -1,6 +1,6 @@
 using LinearAlgebra
 using Rotations
-using RoboticsToolbox: Rotz
+using Talos: Rotz
 
 # ----------------------------------------
 # 1. Rotation about Z-axis (radians)

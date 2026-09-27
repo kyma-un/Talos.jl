@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox: Se2
+using Talos: Se2
 
 # ============================================================
 # Test suite for SE(2) homogeneous transformations
