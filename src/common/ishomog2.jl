@@ -1,32 +1,24 @@
-function IsHomog2(T; valid=false)
-    # Get dimensions
+"""
+    IsHomog2(T; valid=false)
+
+`true` when `T` is 3×3. With `valid=true`, also checks `det(R) ≈ 1`.
+"""
+function IsHomog2(T; valid::Bool=false)
     dims = size(T)
-
-    # Handle 2D matrix
     if ndims(T) == 2
-        h = all(dims .== (3, 3))
-
-        # Check rotation submatrix if requested
-        if h && valid
-            R = T[1:2, 1:2]
-            h = isapprox(det(R), 1.0; atol=eps())
+        ok = dims == (3, 3)
+        if ok && valid
+            ok = isapprox(det(T[1:2, 1:2]), 1.0; atol=eps())
         end
-
-        return h
-
-    # Handle array of matrices: 3x3xN
+        return ok
     elseif ndims(T) == 3 && dims[1:2] == (3, 3)
-        N = dims[3]
-        h_array = trues(N)
-        for i in 1:N
-            h_array[i] = true
-            if valid
-                R = T[1:2, 1:2, i]
-                h_array[i] = isapprox(det(R), 1.0; atol=eps())
+        ok = trues(dims[3])
+        if valid
+            for i in 1:dims[3]
+                ok[i] = isapprox(det(T[1:2, 1:2, i]), 1.0; atol=eps())
             end
         end
-        return h_array
-    else
-        return false
+        return ok
     end
+    return false
 end

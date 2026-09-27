@@ -1,6 +1,6 @@
 using LinearAlgebra          
 using StaticArrays           
-using RoboticsToolbox.HomogenousTransforms: Rot2       
+using RoboticsToolbox: Rot2       
 
 # ----------------------------------------
 # 1. Create a 2D rotation (Rot2)

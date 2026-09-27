@@ -1,6 +1,6 @@
 using LinearAlgebra
 using Rotations
-using RoboticsToolbox.HomogenousTransforms: Rotx
+using RoboticsToolbox: Rotx
 
 # ----------------------------------------
 # 1. Rotation about X-axis (radians)

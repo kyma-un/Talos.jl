@@ -1,30 +1,17 @@
 """
-    module RoboticsToolbox
-
-Main entry point for the RoboticsToolbox package.
-
-This module provides a unified public API for common robotics utilities,
-including homogeneous transformations and visualization tools. Internal
-functionality is delegated to specialized submodules.
+Spatial transforms for robotics: SO(2), SO(3), SE(2) and SE(3).
 """
 module RoboticsToolbox
 
 using Reexport
 
-# ------------------------------------------------------------------
-# Internal submodules
-# ------------------------------------------------------------------
-include("base/HomogenousTransforms.jl")
-@reexport using .HomogenousTransforms
-
-include("Documentar/Documentar.jl")
-@reexport using .Documentar
+include("transforms/transforms.jl")
+@reexport using .Transforms
 
 include("common/common.jl")
 @reexport using .Common
 
-include("plotting/BasePlots.jl")
-@reexport using .BasePlots
+include("plotting/plotting.jl")
+@reexport using .Plotting
 
-
-end # module RoboticsToolbox
+end

@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox.HomogenousTransforms: Transl
+using RoboticsToolbox: Transl
 
 # ============================================================
 # Test suite for Transl — SE(3) pure translations

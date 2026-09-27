@@ -1,6 +1,6 @@
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox.HomogenousTransforms: Transl
+using RoboticsToolbox: Transl
 
 println("=== Transl examples (SE(3) pure translation) ===\n")
 

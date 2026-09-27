@@ -1,35 +1,37 @@
 # RoboticsToolbox
 
-[![Build Status](https://github.com/mora200217/RoboticsToolbox.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/mora200217/RoboticsToolbox.jl/actions/workflows/CI.yml?query=branch%3Amain)
+[![Build Status](https://github.com/kyma-un/JuliaRobTB/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/kyma-un/JuliaRobTB/actions/workflows/CI.yml?query=branch%3Amain)
 
-### Instalación 
+Transformaciones homogéneas y rotaciones para robótica en Julia.
 
-### Getting started 
-Una vez instalada la libreria, se recomienda importar `StaticArrays` para realizar operaciones básicas de transformación y operación. 
-
-> RoboticsToolbox Usar Rotations.jl y CoordinateTransformations.kl 
+## Quickstart
 
 ```julia
+using Pkg
+Pkg.add(url="https://github.com/kyma-un/JuliaRobTB")
+
 using RoboticsToolbox
 using StaticArrays
 
-# Definición de translacion y rotacion 
-t = Translation(0.0, 1.0, 2.0)
-R = RotY(pi/2) * RotZ(pi/4)
+T = Se2(1.0, 2.0, π/2)
+p = T * @SVector [1.0, 0.0, 1.0]
 
-# Definición de punto en el espacio 
-p = SVector(1.0, 0.0, 0.0) # unitario en x 
+H = Se3(T)
+q = H * @SVector [1.0, 0.0, 0.0, 1.0]
 
-# Construcción de la transformación homogénea SE3
-H = SE3(R, t)
-println("Transformación homogenea: ")
-println(H)
-
-# Aplicación de la transformación al punto p
-p_transformed = H(p)
-println("Punto transformado: ")
-println(p_transformed)
-
+R = Rotz(90; deg=true)
 ```
 
-### Desarrollo 
+Para dibujar el marco de `H`, carga un backend de Makie:
+
+```julia
+using GLMakie
+trplot(H)
+```
+
+En un clon local:
+
+```julia
+using Pkg
+Pkg.develop(path=".")
+```

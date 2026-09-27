@@ -1,7 +1,7 @@
 using LinearAlgebra
 using StaticArrays
-using RoboticsToolbox.Common: IsRot2
-using RoboticsToolbox.HomogenousTransforms: Rot2, Se2
+using RoboticsToolbox: IsRot2
+using RoboticsToolbox: Rot2, Se2
 
 # ----------------------------------------
 # 1. Single 2D rotation

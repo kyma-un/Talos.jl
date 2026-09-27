@@ -1,9 +1,9 @@
 using Test
 using LinearAlgebra
 using StaticArrays
-using RoboticsToolbox.HomogenousTransforms: Roty
+using RoboticsToolbox: Roty
 
-@testset "ROTX Tests" begin
+@testset "Roty" begin
 
     # --- Test 1: Rotation by π/4 radians ---
     θ = π/4

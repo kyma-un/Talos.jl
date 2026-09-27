@@ -1,5 +1,5 @@
 using StaticArrays
-using RoboticsToolbox.HomogenousTransforms: Transl2
+using RoboticsToolbox: Transl2
 
 println("=== Transl2 examples ===")
 

@@ -1,5 +1,5 @@
 using StaticArrays
-using RoboticsToolbox.HomogenousTransforms: Se2, Se3
+using RoboticsToolbox: Se2, Se3
 
 println("=== SE(3) examples ===\n")
 

@@ -1,5 +1,2 @@
 using Pkg
-Pkg.develop(path="/Users/amoralesma/Documents/kyma/julia-rtb")
-
-
-using RoboticsToolbox
+Pkg.develop(path=dirname(@__DIR__))

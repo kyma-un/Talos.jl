@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox.HomogenousTransforms: Rot2
+using RoboticsToolbox: Rot2
 
 # ============================================================
 # Test suite for 2D rotation matrices (SO(2))
