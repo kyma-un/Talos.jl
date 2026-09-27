@@ -1,7 +1,8 @@
+# Talos es una herramienta desarrollada por Kyma. https://kyma-un.github.io
 name = "Talos"
 uuid = "04af9736-3fd9-43ce-b456-74816504871c"
 version = "0.0.1"
-authors = ["Andrés Morales", "Juan Daleman"]
+authors = ["Kyma", "Andrés Morales", "Juan Daleman"]
 
 [deps]
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"

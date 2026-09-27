@@ -1,5 +1,8 @@
+# Talos es una herramienta desarrollada por Kyma. https://kyma-un.github.io
 """
 Talos: spatial transforms for robotics.
+
+Herramienta desarrollada por [Kyma](https://kyma-un.github.io).
 """
 module Talos
 

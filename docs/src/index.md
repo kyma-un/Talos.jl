@@ -10,6 +10,8 @@ CurrentModule = Talos
 
 Transformaciones homogéneas y rotaciones para robótica en Julia.
 
+Herramienta desarrollada por [Kyma](https://kyma-un.github.io).
+
 ## Instalación
 
 ```julia

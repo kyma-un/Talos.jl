@@ -346,7 +346,7 @@ version = "1.0.3"
 
 [[deps.Talos]]
 deps = ["LinearAlgebra", "Reexport", "Rotations", "StaticArrays"]
-path = "/Users/amoralesma/Documents/kyma/julia-rtb"
+path = "/Users/amoralesma/Documents/kyma/talos"
 uuid = "04af9736-3fd9-43ce-b456-74816504871c"
 version = "0.0.1"
 

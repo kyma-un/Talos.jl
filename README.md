@@ -8,7 +8,8 @@
 </p>
 
 <p align="center">
-  Transformaciones homogéneas y rotaciones para robótica en Julia.
+  Transformaciones homogéneas y rotaciones para robótica en Julia.<br>
+  Herramienta desarrollada por <a href="https://kyma-un.github.io">Kyma</a>.
 </p>
 
 ## Quickstart

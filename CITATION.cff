@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: Talos.jl
+message: Talos es una herramienta desarrollada por Kyma.
+type: software
+authors:
+  - name: Kyma
+    website: https://kyma-un.github.io
+  - family-names: Morales
+    given-names: Andrés
+  - family-names: Daleman
+    given-names: Juan
+url: https://kyma-un.github.io
+repository-code: https://github.com/kyma-un/JuliaRobTB
+license: MIT
+version: 0.0.1
