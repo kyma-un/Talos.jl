@@ -1,6 +1,6 @@
 using LinearAlgebra          
 using StaticArrays           
-using RoboticsToolbox: Rot2       
+using Talos: Rot2       
 
 # ----------------------------------------
 # 1. Create a 2D rotation (Rot2)

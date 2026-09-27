@@ -1,5 +1,5 @@
 using StaticArrays
-using RoboticsToolbox: Transl2
+using Talos: Transl2
 
 println("=== Transl2 examples ===")
 

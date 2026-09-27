@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox: Transl
+using Talos: Transl
 
 # ============================================================
 # Test suite for Transl — SE(3) pure translations

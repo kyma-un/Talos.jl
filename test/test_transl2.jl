@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox: Transl2
+using Talos: Transl2
 
 @testset "Transl2 – SE(2) pure translation" begin
 

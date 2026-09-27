@@ -1,7 +1,7 @@
 using LinearAlgebra
 using StaticArrays
-using RoboticsToolbox: IsHomog2
-using RoboticsToolbox: Se2, Se3
+using Talos: IsHomog2
+using Talos: Se2, Se3
 
 # ----------------------------------------
 # 1. Single SE(2) transformation using Se2

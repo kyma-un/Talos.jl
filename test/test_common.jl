@@ -1,6 +1,6 @@
 using Test
 using StaticArrays
-using RoboticsToolbox: Se2, Se3, Rot2, IsHomog2, IsRot2, trplot
+using Talos: Se2, Se3, Rot2, IsHomog2, IsRot2, trplot
 
 @testset "IsHomog2 / IsRot2" begin
     T = Se2(1.0, 2.0, π/2)

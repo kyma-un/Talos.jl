@@ -1,9 +1,9 @@
-module RoboticsToolboxMakieExt
+module TalosMakieExt
 
-using RoboticsToolbox
+using Talos
 using Makie
 
-function RoboticsToolbox.Plotting.trplot(T::AbstractMatrix{<:Real}; scale=1.0, linewidth=2)
+function Talos.Plotting.trplot(T::AbstractMatrix{<:Real}; scale=1.0, linewidth=2)
     size(T) == (4, 4) || throw(ArgumentError("trplot expects a 4×4 homogeneous transform"))
     o = T[1:3, 4]
     axes = ntuple(i -> o .+ scale .* T[1:3, i], 3)

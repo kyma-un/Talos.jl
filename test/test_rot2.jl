@@ -1,7 +1,7 @@
 using Test
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox: Rot2
+using Talos: Rot2
 
 # ============================================================
 # Test suite for 2D rotation matrices (SO(2))

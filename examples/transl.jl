@@ -1,6 +1,6 @@
 using StaticArrays
 using LinearAlgebra
-using RoboticsToolbox: Transl
+using Talos: Transl
 
 println("=== Transl examples (SE(3) pure translation) ===\n")
 
