@@ -8,7 +8,7 @@ Transformaciones homogéneas y rotaciones para robótica en Julia.
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/kyma-un/JuliaRobTB")
+Pkg.add(url="https://github.com/kyma-un/Talos.jl")
 
 using Talos
 using StaticArrays
