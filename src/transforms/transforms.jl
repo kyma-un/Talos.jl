@@ -1,5 +1,6 @@
 module Transforms
 
+using LinearAlgebra
 using StaticArrays
 using Rotations
 
@@ -11,7 +12,8 @@ include("rot2.jl")
 include("rotx.jl")
 include("roty.jl")
 include("rotz.jl")
+include("trinterp.jl")
 
-export Se2, Se3, Transl, Transl2, Rot2, Rotx, Roty, Rotz
+export Se2, Se3, Transl, Transl2, Rot2, Rotx, Roty, Rotz, Trinterp, Trmove
 
 end

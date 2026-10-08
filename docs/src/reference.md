@@ -19,6 +19,8 @@ Rot2
 Rotx
 Roty
 Rotz
+Trinterp
+Trmove
 ```
 
 ## Comprobaciones
@@ -32,4 +34,7 @@ IsRot2
 
 ```@docs
 trplot
+tranimate
+tranimate_move
+trframes_gui
 ```

@@ -6,6 +6,7 @@ using Test
     include("test_se3.jl")
     include("test_transl.jl")
     include("test_transl2.jl")
+    include("test_trinterp.jl")
     include("test_rot2.jl")
     include("test_rotx.jl")
     include("test_roty.jl")
